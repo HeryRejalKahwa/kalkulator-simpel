@@ -46,6 +46,7 @@ int pilih;
         display = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("kalkulator simpel");
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         kah1.setText("1");
@@ -192,7 +193,9 @@ int pilih;
         });
         getContentPane().add(kahsamadengan, new org.netbeans.lib.awtextra.AbsoluteConstraints(152, 220, 132, 32));
 
+        display.setEditable(false);
         display.setFont(new java.awt.Font("Tahoma", 1, 36)); // NOI18N
+        display.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
         display.setToolTipText("");
         getContentPane().add(display, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 11, 274, 46));
 
