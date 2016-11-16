@@ -180,6 +180,11 @@ int pilih;
         getContentPane().add(kahplusminus, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 220, 132, 32));
 
         kahsamadengan.setText("=");
+        kahsamadengan.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                kahsamadenganActionPerformed(evt);
+            }
+        });
         getContentPane().add(kahsamadengan, new org.netbeans.lib.awtextra.AbsoluteConstraints(152, 220, 132, 32));
 
         display.setFont(new java.awt.Font("Tahoma", 1, 36)); // NOI18N
@@ -279,6 +284,38 @@ display.setText("/");
 angka="";
 pilih=4;
     }//GEN-LAST:event_kahbagiActionPerformed
+
+    private void kahsamadenganActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_kahsamadenganActionPerformed
+       switch(pilih){
+        case 1:
+            angka2 = Double.parseDouble(angka);
+            jumlah = angka1 + angka2;
+            angka = Double.toString(jumlah);
+            display.setText(angka);
+            break;
+        case 2:
+            angka2 = Double.parseDouble(angka);
+            jumlah = angka1 - angka2;
+            angka = Double.toString(jumlah);
+            display.setText(angka);
+            break;
+        case 3:
+            angka2 = Double.parseDouble(angka);
+            jumlah = angka1 * angka2;
+            angka = Double.toString(jumlah);
+            display.setText(angka);
+            break;
+        case 4:
+            angka2 = Double.parseDouble(angka);
+            jumlah = angka1 / angka2;
+            angka = Double.toString(jumlah);
+            display.setText(angka);
+            break;
+            default:
+            break;
+} 
+
+    }//GEN-LAST:event_kahsamadenganActionPerformed
 
     /**
      * @param args the command line arguments
