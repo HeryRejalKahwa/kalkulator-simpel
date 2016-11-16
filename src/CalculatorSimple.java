@@ -146,6 +146,11 @@ int pilih;
         getContentPane().add(kahtitik, new org.netbeans.lib.awtextra.AbsoluteConstraints(81, 182, 61, 32));
 
         kahclear.setText("c");
+        kahclear.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                kahclearActionPerformed(evt);
+            }
+        });
         getContentPane().add(kahclear, new org.netbeans.lib.awtextra.AbsoluteConstraints(152, 182, 61, 32));
 
         kahbagi.setText("/");
@@ -218,6 +223,14 @@ display.setText(angka);
     angka += ".";
 display.setText(angka);
     }//GEN-LAST:event_kahtitikActionPerformed
+
+    private void kahclearActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_kahclearActionPerformed
+    display.setText("");
+angka1=0.0;
+angka2=0.0;
+jumlah=0.0;
+angka="";
+    }//GEN-LAST:event_kahclearActionPerformed
 
     /**
      * @param args the command line arguments
